@@ -6,26 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black History Game</title>
     <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
 
 </head>
 
 <body>
     <header>
-        <h1 class="logo"><a href="index.html">Hi,</a></h1>
+        <ul><a href="index.html"><i class="fas fa-arrow-left"></i></a></ul>
         <nav>
             <div class="menu">
-                <ul>About</ul>
-                <ul>Contact</ul>
-                <ul>FAQ</ul>
-                <ul>Resume</ul>
-                <ul>GitHub</ul>
-            </div>
-            <div class="menu">
-                <ul>Archive</ul>
-                <ul>Shuffle</ul>
+                <ul><a href="about.html">About</a></ul>
+                <ul><a class="mailto" href="mailto:contact@test.com">Contact</a></ul>
+                <ul><a href="#">FAQ</a></ul>
+                <ul><a href="#">Resume</a></ul>
+                <ul><a href="https://github.com/rhenry7?tab=repositories">GitHub</a></ul>
             </div>
         </nav>
     </header>
+        <div class="theBall-outer">
+        <div class="theBall btn-liquid">
+        </div>
+    </div>
     <section class="main">
         <div class="row">
             <div class="column">
@@ -33,19 +37,27 @@
                     <p>
                         <h4>About</h4>
 
-                        <br> Veghead is an application I developed using React, JavaScript, HTML/CSS and Adobe CC. This site was deployed using Github. The goal of this project was to allow vegan and vegetarian users an easier and friendlier experience
-                        for finding restaurants catering to their specific diets. As a health conscious eater, and an advocate for healthy lifestyles overall, I enjoyed creating an application that will help users achieve their goals.
+                        <br> This game was created to educate and amplify the history of the african disapora beyond the scope of the african-american context. The illustrations reflect a myriad of peoples throughout the history, reflecting various cultures and periods. Representation and diversity are an import part of inclusion and establishing more accepting and tolerant society.
+                        <br>
+                        <br>
+                        <h4>Future Content</h4>
 
+                        <br> An additional feature to be included for educational purposes are modules to show facts relating to the particular group that has matched. For increased diffuclty, including a counter to measure the amount of moves taken per turn may be added. 
                         <br>
                         <br>
-                        <h4>About</h4>
+                        <br> Role: Conception, Ideation, UI, Usability Testing
+                        <br> Design Tools: Adobe Illustrator 
+                        <br>Languages: HTML/CSS/JavaScript <br> Frameworks: jQuery  <br> Deployment: Github pages
+    <br>
+                        <br>
 
-                        <br> Veghead is an application I developed using React, JavaScript, HTML/CSS and Adobe CC. This site was deployed using Github. The goal of this project was to allow vegan and vegetarian users an easier and friendlier experience
-                        for finding restaurants catering to their specific diets. As a health conscious eater, and an advocate for healthy lifestyles overall, I enjoyed creating an application that will help users achieve their goals.
-
-                        <br>
-                        <br>
-                        <a href="https://rhenry7.github.io/VegHead/" class="demo_link">View The live site here</a>
+                        <ul class="sections_menu">
+                        <li>
+                            <a href="https://github.com/rhenry7/memory-game">View The Code</a>
+                        </li>
+                        <li>
+                            <a href="#user_research">Click To Play</a>
+                        </li>
                         <br>
                         <br>
 
@@ -55,11 +67,12 @@
             <div class="column">
                 <div class="green-column">
                     <p class="description_title">Black History Memorization Game</p>
-                    <p class="description">This site is currently in development
+                    <p class="description">This site is currently in Work In Progress
                     </p>
-                    <img src="imgs/African-Cards.gif" alt="" class="project-image">
+                   
                     <img src="imgs/Queens.jpg" alt="" class="project-image">
                     <img src="imgs/Deck.jpg" alt="" class="project-image">
+                     <img src="imgs/African-Cards.gif" alt="" class="project-image">
                     <img src="imgs/bhg_1.png" alt="" class="project-image">
                     <img src="imgs/bhg_2.png" alt="" class="project-image">
                     <img src="imgs/bhg_3.png" alt="" class="project-image">
@@ -72,5 +85,6 @@
     </section>
 
 </body>
+<script src="js/script.js"></script>
 
 </html>

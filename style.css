@@ -14,6 +14,12 @@ canvas[resize] {
     height: 100%;
 }
 
+ul a {
+    font-size: 17px;
+    margin: 0px;
+    padding: 0px;
+}
+
 .tickerwrapper {
     /* the outer div */
     position: relative;
@@ -43,6 +49,7 @@ ul.list.cloned {
 ul.list li {
     float: left;
     padding-left: 20px;
+    text-decoration: none;
 }
 
 .theBall,
@@ -77,7 +84,7 @@ canvas[resize] {
 
 .theBall {
     position: absolute;
-    background-color: rgb(155, 36, 206);
+    background-color: white;
     border-radius: 50%;
     -webkit-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
     -moz-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
@@ -102,7 +109,7 @@ canvas[resize] {
 } */
 
 ::selection {
-    background-color: green;
+    background-color: rgb(255, 0, 0);
     color: #fff;
 }
 
@@ -115,13 +122,19 @@ a.test {
 
 body {
     height: 70vh;
-    background: rgb(217, 205, 185);
-    color: rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     /* background: black;
     color: white; */
-    font-family: "Montserrat";
+    font-family: gopher, sans-serif;
     font-weight: 100;
     cursor: none;
+}
+
+.fas,
+.fa-arrow-left {
+    font-size: 48px;
+    padding: 10px;
 }
 
 header {
@@ -150,6 +163,11 @@ header {
     cursor: none;
 }
 
+.about {
+    padding: 50px;
+    width: 800px;
+}
+
 .projects {
     width: 700px;
     height: 400px;
@@ -168,7 +186,7 @@ a {
     font-size: 42px;
     margin: 8px;
     display: inline-block;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     align-items: center;
     text-decoration: none;
     font: 100;
@@ -184,7 +202,7 @@ a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: rgb(0, 0, 0);
+    background: #fff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -196,7 +214,7 @@ a:hover:after {
 
 a {
     font-family: gopher, sans-serif;
-    color: rgb(0, 0, 0);
+    color: #fff;
     /* text-transform: uppercase; */
     text-decoration: none;
     font-size: 42px;
@@ -214,7 +232,8 @@ a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: rgb(0, 0, 0);
+    text-decoration: none;
+    background: #fff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -234,13 +253,37 @@ a:hover:after {
 
 li {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .menu {
     float: inline-end;
     width: 100%;
-    margin: 10px;
-    padding: 10px;
+    margin: 71px;
+    padding: 145px;
+}
+
+.menu.about {
+    margin: 115px
+}
+
+.menu.index {
+    margin: 0px;
+    padding: 0px;
+}
+
+@-moz-document url-prefix() {
+    .menu {
+        padding: 0px;
+    }
+    .menu.index {
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+nav {
+    display: float;
 }
 
 .logo {
@@ -337,9 +380,11 @@ body:not(.mobile) .hover-title:hover+.hover-image {
 .row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: none;
     width: 100%;
 }
+
+.archive {}
 
 .column {
     display: flex;
@@ -351,16 +396,30 @@ body:not(.mobile) .hover-title:hover+.hover-image {
 }
 
 .blue-column {
-    width: 350px;
+    width: 300px;
     height: 300px;
     position: fixed;
-    margin: 50px;
+    margin-top: 50px;
+    margin-right: auto;
+    padding: 0px;
+    justify-content: left;
+    font: 200;
+}
+
+.archive-column {
+    width: 80%;
+    height: 100vh;
+    margin: auto;
     padding: 50px;
-    justify-content: center;
+    font: 200;
+}
+
+.archive_list {
+    width: 900;
 }
 
 .green-column {
-    width: auto;
+    width: 700px;
     height: auto;
     margin: 111px;
     margin-top: 90px;
@@ -375,7 +434,6 @@ body:not(.mobile) .hover-title:hover+.hover-image {
     max-height: 100% !important;
     transition: transform .1s;
     /* border: solid; */
-    background-color: rgb(244, 242, 242);
     margin: 10px;
 }
 
@@ -404,6 +462,14 @@ body:not(.mobile) .hover-title:hover+.hover-image {
     text-decoration: underline;
 }
 
+.sections_menu>li>a:hover {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
 .project-image:hover {
     /* -ms-transform: scale(1.5); */
     /* IE 9 */
@@ -424,8 +490,14 @@ body:not(.mobile) .hover-title:hover+.hover-image {
     width: 200px;
 }
 
+.fa-paper-plane {
+    color: #fff;
+    font-size: 12px;
+}
+
 li {
     list-style: none;
+    text-decoration: none;
 }
 
 .fixed_element {
@@ -482,14 +554,33 @@ body {
     font-weight: normal;
     line-height: 1.2;
     margin: 0;
-    margin-top: 250px;
-    margin-bottom: 70px;
+    margin-top: 50px;
+    margin-bottom: 10px;
     outline: none;
     padding: 0 10% 1.2% 10%;
     text-align: center;
     text-transform: uppercase;
     transition: color $anim; // To work with JS
     font-weight: 100;
+}
+
+.levi {
+    border: 5px solid rgb(222, 222, 222);
+}
+
+.fa-arrow-down {
+    margin: 0;
+    padding: 0 10% 1.2% 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.fa-arrow-down:hover {
+    margin: 0;
+    text-align: right;
+    display: flex;
+    align-content: space-around;
 }
 
 .icon-long-arrow-right {
@@ -537,6 +628,27 @@ canvas[resize] {
 
 /* For desktop: */
 
+@media only screen and (max-width: 1500px) {
+    .blue-column {
+        width: 300px;
+        height: 300px;
+        margin: 50px;
+        padding: 50px;
+        justify-content: center;
+        font-size: 15px;
+        position: relative;
+    }
+    .green-column {
+        width: 500px;
+        height: auto;
+        margin: 111px;
+        margin-top: 90px;
+        /* margin-right: 111px; */
+        margin-bottom: 111px;
+        margin-left: -50px;
+    }
+}
+
 @media only screen and (max-width: 1400px) {
     .projects_category {
         display: flex;
@@ -555,7 +667,7 @@ canvas[resize] {
         flex-wrap: wrap;
         width: 100%;
     }
-    .column {
+    /* .column {
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
@@ -568,19 +680,15 @@ canvas[resize] {
         height: 300px;
         margin: 50px;
         padding: 50px;
-        justify-content: center;
-        font-size: 15px;
+        font-size: 12px;
         position: relative;
     }
     .green-column {
-        width: auto;
+        width: 700px;
         height: auto;
         margin: 111px;
         margin-top: 90px;
         /* margin-right: 111px; */
-        margin-bottom: 111px;
-        margin-left: -50px;
-    }
 }
 
 @media only screen and (max-width: 1268px) {
@@ -648,12 +756,12 @@ canvas[resize] {
         margin: auto;
         margin-top: 50px;
         padding: 80px;
-        /* margin: 111px;
+        margin: 111px;
         margin-top: 90px;
         margin-right: 111px;
         margin-bottom: 111px;
         margin-left: 111px;
-        margin-left: -111px; */
+        margin-left: -111px;
     }
 }
 
@@ -683,6 +791,36 @@ canvas[resize] {
     }
     a {
         font-size: 30px
+    }
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        padding: 20px;
+        margin: 20px;
+    }
+    .blue-column {
+        width: 300px;
+        height: 300px;
+        margin: 50px;
+        padding: 50px;
+        justify-content: center;
+        font-size: 15px;
+        position: relative;
+    }
+    .green-column {
+        width: auto;
+        height: auto;
+        margin: auto;
+        margin-top: 50px;
+        padding: 80px;
+        margin: 111px;
+        margin-top: 90px;
+        margin-right: 111px;
+        margin-bottom: 111px;
+        margin-left: 111px;
+        margin-left: -111px;
     }
 }
 

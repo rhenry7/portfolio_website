@@ -18,6 +18,52 @@ $(function() {
   });
 })
 
+
+// smooth scroll on arrow effect 
+
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 2800);
+    return false;
+});
+
+$("a").click(function(){
+	$("#down").fadeOut();
+  });
+
+/*
+
+This effect changes background on scroll, 
+should be smooth animation - *not* fast, harsh 
+
+maybe limited color transitions? 
+
+*/
+
+// $(document).ready(function(){       
+// 	var scroll_pos = 0;
+// 	$(document).scroll(function() { 
+// 		scroll_pos = $(this).scrollTop();
+// 		if(scroll_pos > 210) {
+// 			$("body").css('background-color', 'blue');
+// 		} else {
+// 			$("body").css('background-color', 'red');
+// 		}
+// 	});
+// });
+
+// $(document).ready(function(){
+//     $(document).scroll(function() {
+//         var alpha = Math.min(0.8 + 0.1 * $(this).scrollTop() / 102, 0.9);
+//         var channel = Math.round(alpha * 255);
+//         $("body").css('background-color', 'rgb(' + channel + ',' + channel + ',' + channel + ')');
+//     });
+// });
+
+
+
+
 /* 
  * HOVER ALPHA EFFECT
  * Move your mouse or drag your finger to change the alpha opacity color of the text, and to see 3 colorful text-shadow effects.
@@ -74,10 +120,10 @@ function createShadow(e, currTarget) {
 	const xWalk = coordWalk(e.clientX, currTarget.offsetWidth);
 	const yWalk = coordWalk(e.clientY, currTarget.offsetHeight);
 
-	const pink = [105, 105, 105,];
-	const blue = [192, 192, 192,];
-	const yellow = [211, 211, 211];
-	const typoAlpha = 0.1;
+	const pink = [255,47,47];
+	const blue = [255,101,62];
+	const yellow = [255,177,58];
+	const typoAlpha = 0.3;
 
 	const typo = currTarget.querySelector(".typo");
 	changeTextAlphaVal(typo, e); // Comment this if you don't want the text alpha opacity to change on interaction
