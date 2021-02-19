@@ -648,6 +648,25 @@ a.indexmailcta::after {
     left: 0;
 }
 
+@-moz-document url-prefix() {
+    .indexmailcta {
+        text-align: left;
+        font-size: 34px;
+        font-family: gopher, sans-serif;
+        font-weight: 100;
+        font-style: bold;
+        cursor: none;
+        display: contents;
+        text-decoration: underline;
+        color: white;
+    }
+    .indexmailcta:hover {
+        color: yellow;
+        text-decoration: underline;
+        font-size: larger;
+    }
+}
+
 
 /* For desktop: */
 
