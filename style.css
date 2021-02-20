@@ -55,13 +55,6 @@ ul.list li {
 .theBall,
 .theBall-outer {
     mix-blend-mode: exclusion;
-    width: 300px;
-    height: 300px;
-}
-
-.theBall,
-.theBall-outer {
-    mix-blend-mode: exclusion;
     width: 170px;
     height: 170px;
 }
@@ -69,16 +62,11 @@ ul.list li {
 
 /* Scale canvas with resize attribute to full size */
 
-canvas[resize] {
-    width: 100%;
-    height: 100%;
-}
-
 .theBall-outer {
     position: fixed;
     top: -100px;
     left: -100px;
-    z-index: 5000;
+    z-index: 2000;
     pointer-events: none!important;
 }
 
@@ -86,6 +74,8 @@ canvas[resize] {
     position: absolute;
     background-color: white;
     border-radius: 50%;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
     -webkit-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
     -moz-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
     -ms-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
@@ -96,7 +86,7 @@ canvas[resize] {
 
 .dark_page .theBall,
 .coloring .theBall {
-    background-color: blue;
+    background-color: white;
 }
 
 
@@ -490,11 +480,6 @@ body:not(.mobile) .hover-title:hover+.hover-image {
     width: 200px;
 }
 
-.fa-paper-plane {
-    color: #fff;
-    font-size: 12px;
-}
-
 li {
     list-style: none;
     text-decoration: none;
@@ -619,12 +604,6 @@ body {
 
 /* Scale canvas with resize attribute to full size */
 
-canvas[resize] {
-    width: 100%;
-    height: 100%;
-    background: black;
-}
-
 .indexmailcta {
     text-align: left;
     font-size: 34px;
@@ -708,28 +687,6 @@ a.indexmailcta::after {
         flex-wrap: wrap;
         width: 100%;
     }
-    /* .column {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1;
-        padding: 20px;
-        margin: 20px;
-    }
-    .blue-column {
-        width: 300px;
-        height: 300px;
-        margin: 50px;
-        padding: 50px;
-        font-size: 12px;
-        position: relative;
-    }
-    .green-column {
-        width: 700px;
-        height: auto;
-        margin: 111px;
-        margin-top: 90px;
-        /* margin-right: 111px; */
 }
 
 @media only screen and (max-width: 1268px) {
@@ -803,214 +760,5 @@ a.indexmailcta::after {
         margin-bottom: 111px;
         margin-left: 111px;
         margin-left: -111px;
-    }
-}
-
-
-/* For tablets: */
-
-@media only screen and (max-width: 1100px) {
-    .intro {
-        width: 650px;
-        height: 300px;
-        margin: auto;
-        padding: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 34px;
-    }
-    .projects_category {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 15px;
-        margin: auto;
-        margin-left: 20px;
-    }
-    a {
-        font-size: 30px
-    }
-    .column {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1;
-        padding: 20px;
-        margin: 20px;
-    }
-    .blue-column {
-        width: 300px;
-        height: 300px;
-        margin: 50px;
-        padding: 50px;
-        justify-content: center;
-        font-size: 15px;
-        position: relative;
-    }
-    .green-column {
-        width: auto;
-        height: auto;
-        margin: auto;
-        margin-top: 50px;
-        padding: 80px;
-        margin: 111px;
-        margin-top: 90px;
-        margin-right: 111px;
-        margin-bottom: 111px;
-        margin-left: 111px;
-        margin-left: -111px;
-    }
-}
-
-@media only screen and (max-width: 980) {}
-
-
-/* For tablets: */
-
-@media only screen and (max-width: 770px) {
-    body {
-        height: 100px;
-        /* background: black;
-        color: white; */
-        font-family: "Montserrat";
-        font-weight: 100;
-        cursor: crosshair;
-    }
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 45px;
-        margin: 50px;
-        top: 0;
-        width: 100%;
-    }
-    .projects-category {
-        display: grid;
-        margin: 20px;
-        padding: 35px;
-        justify-content: center;
-        align-items: center;
-    }
-    .intro {
-        width: 450px;
-        height: 58px;
-        /* display: inline; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        text-align: left;
-        font-size: 25px;
-        margin-top: 450px;
-        margin-bottom: 50px;
-        padding: 90px;
-        margin-right: 10px;
-    }
-    section {
-        display: flex;
-        flex-direction: row;
-    }
-    .projects {
-        width: 50px;
-        height: 61px;
-        /* margin: auto; */
-        margin-top: auto;
-        display: flow-root;
-        /* flex-direction: inherit; */
-        /* flex-basis: 100%; */
-        /* justify-content: center; */
-        /* justify-content: baseline; */
-        align-items: initial;
-        /* padding: 45px; */
-        /* margin-top: 250px; */
-        /* margin-bottom: 30px; */
-    }
-    a {
-        /* padding: 12px; */
-        font-family: 'Lexend Deca', sans-serif;
-        font-size: 32px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        color: rgb(255, 255, 255);
-        align-items: center;
-        text-decoration: none;
-        /* font: 100; */
-        font-style: bold;
-        /* font-weight: 400; */
-    }
-    .hover-title {
-        display: inline-block;
-        pointer-events: auto;
-        cursor: pointer;
-        text-align: left;
-    }
-    .category_name {
-        /* display: none; */
-        background-color: rgb(0, 0, 0);
-        padding: 20px;
-        margin-right: 50px;
-        /* width: 1080px; */
-        /* flex: none; */
-    }
-    .ai_projects {
-        margin-right: 70px;
-    }
-}
-
-@media only screen and (max-width: 570px) {
-    .intro {
-        width: 350px;
-        height: 58px;
-        /* display: inline; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        text-align: left;
-        font-size: 22px;
-        margin-top: 400px;
-        margin-bottom: 50px;
-        padding: 50px;
-        margin-right: 10px;
-        margin-left: 20px;
-    }
-    header {
-        height: 10vh;
-        background-color: rgb(0, 0, 0);
-        padding: 50px;
-        margin: 50px;
-        margin-top: -10px;
-        top: 0;
-    }
-    nav {
-        background-color: rgb(0, 0, 0);
-        margin-bottom: 50px;
-    }
-    .menu {
-        padding: 20px;
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    body {
-        height: 800px;
-    }
-    header {
-        margin-bottom: 200px;
-    }
-    .intro {
-        width: 225px;
-        height: 108px;
-        justify-content: center;
-        align-items: center;
-        text-align: left;
-        font-size: 18px;
-        margin-top: 400px;
-        margin-bottom: 50px;
-        padding: 50px;
-        margin-right: 10px;
-        margin-left: 20px;
     }
 }
