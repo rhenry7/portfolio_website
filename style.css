@@ -99,7 +99,7 @@ ul.list li {
 } */
 
 ::selection {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(170, 170, 170);
     color: #fff;
 }
 
