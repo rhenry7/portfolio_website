@@ -112,7 +112,7 @@ a.test {
 
 body {
     height: 70vh;
-    background: rgb(146, 98, 120);
+    background: rgb(185, 124, 152);
     color: rgb(255, 255, 255);
     /* background: black;
     color: white; */
@@ -529,6 +529,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-transform: none;
 }
 
 .typo {
@@ -544,7 +545,6 @@ body {
     outline: none;
     padding: 0 10% 1.2% 10%;
     text-align: center;
-    text-transform: uppercase;
     transition: color $anim; // To work with JS
     font-weight: 100;
 }
@@ -721,7 +721,6 @@ a.indexmailcta::after {
     }
     a {
         padding: 10px;
-        font-family: 'Lexend Deca', sans-serif;
         font-size: 40px;
         margin: 4px;
         display: inline-block;
