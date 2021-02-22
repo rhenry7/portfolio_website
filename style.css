@@ -55,8 +55,9 @@ ul.list li {
 .theBall,
 .theBall-outer {
     mix-blend-mode: exclusion;
-    width: 170px;
-    height: 170px;
+    will-change: opacity;
+    width: 120px;
+    height: 120px;
 }
 
 
@@ -72,21 +73,14 @@ ul.list li {
 
 .theBall {
     position: absolute;
-    background-color: white;
+    background-color: rgb(255, 255, 255) !important;
     border-radius: 50%;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
     -webkit-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
     -moz-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
     -ms-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
     -o-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
     transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
-    transform-origin: center center;
-}
-
-.dark_page .theBall,
-.coloring .theBall {
-    background-color: white;
+    transform-origin: center;
 }
 
 
