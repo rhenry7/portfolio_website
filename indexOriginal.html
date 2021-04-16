@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramone's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script type="text/javascript" src="paper-full.js"></script>
+    <script type="text/paperscript" canvas="canvas">
+        // Adapted from the following Processing example: // http://processing.org/learning/topics/follow3.html /* // The amount of points in the path: var points = 24; // The distance between the points: var length = 34; var path = new Path({ strokeColor: '#e4141b',
+        strokeWidth: 200, strokeCap: 'round' }); function onResize(event) { // Whenever the window is resized, recenter the path: path.position = view.center; } var start = view.center / [10, 1]; for (var i = 0; i
+        < points; i++) path.add(start + new Point(i * length, 0)); function onMouseMove(event) { path.firstSegment.point=e vent.point; for (var i=0 ; i < points - 1; i++) { var segment=p ath.segments[i]; var nextSegment=s egment.next; var vector=s egment.point
+            - nextSegment.point; vector.length=l ength; nextSegment.point=s egment.point - vector; } path.smooth({ type: 'continuous' }); path.strokeColor.hue +=1 ; } function onMouseDown(event) { path.fullySelected=t rue; path.strokeColor='#e08285' ; } function
+            onMouseUp(event) { path.fullySelected=f alse; path.strokeColor='#e4141b' ; } */ </script>
+
+</head>
+
+<body>
+
+
+    <header>
+        <!-- <a class="logo"><img src="imgs/logo-title.gif" alt="" id="logo"></a> -->
+        <!-- <nav class="animate__animated animate__fadeIn animate__delay-4s">
+            <div class="menu index">
+                <ul><a href="about.html">About</a></ul>
+                <ul><a class="mailto" href="mailto:ramoneh94@gmail.com">Contact</a></ul>
+                <ul><a href="#">FAQ</a></ul>
+                <ul><a href="#">Resume</a></ul>
+                <ul><a href="https://github.com/rhenry7?tab=repositories">GitHub</a></ul>
+            </div>
+        </nav> -->
+    </header>
+
+    <div class="theBall-outer">
+        <div class="theBall btn-liquid">
+        </div>
+    </div>
+    <!--  -->
+
+    <div>
+        <div class="heading" contenteditable="false">
+            <p class="typo animate__animated animate__fadeIn animate__delay-2s" spellcheck="false" contenteditable="false">Hey, I'm Ramone.</p>
+        </div>
+        <div class="animate__animated animate__fadeIn animate__delay-5s">
+            <a href="#projects"><i class="fas fa-arrow-down" id="down"></i></div></a>
+        </div>
+        <div class="intro fixed_element" id="intro">
+            <p class="hideme heading"> I'm a New York based sushi-enthusiast with six years of experience designing and developing interfaces. Got a project? <a class="indexmailcta" href="mailto:ramoneh94@gmail.com">Let's talk.</a></p>
+        </div>
+        <!-- <div class="intro fixed_element" id="intro">
+            <p class="hideme works">Selected Work. ©2020</p>
+
+        </div> -->
+        <section class="hideme_2 projects animate__animated animate__fadeIn animate__delay-2s" id='projects'>
+            <div class="projects_category  animate__delay-1s">
+                <div>
+                    <a href="shleepy.html" class="hover-title">Shleepy</a><span class="hover-image "><img src="imgs/cover.png" alt="" srcset=""></span>
+                    <a href="veghead.html" class="hover-title">VegHead</a><span class="hover-image"><img src="imgs/veghead_cover.png" alt="" srcset=""></span>
+                    <a href="animal_hospital.html" class="hover-title">Animal Hospital</a><span class="hover-image"><img src="imgs/pet_clinic.png" alt="" srcset=""></span>
+                </div>
+            </div>
+            <div class="projects_category  animate__delay-1s">
+
+                <div>
+                    <a href="paypal.html" class="hover-title">PayPal</a><span class="hover-image"><img src="imgs/paypal/seven.png" alt="" srcset=""></span>
+                    <a href="macys.html" class="hover-title">Macy's</a><span class="hover-image"><img src="imgs/macys_cover.jpg" alt="" srcset=""></span>
+                    <a href="schick.html" class="hover-title">Schick Razors</a><span class="hover-image"><img src="imgs/schick_one.jpg" alt="" srcset=""></span>
+
+                </div>
+            </div>
+            <!-- <div class="projects_category  animate__delay-5s">
+            <div>
+                <a href="#" class="hover-title">Shleepy.js</a><span class="hover-image"><img src="imgs/Shleepy-Demo.png" alt="" srcset=""></span>
+                <a href="#" class="hover-title">DJ Box</a><span class="hover-image"><img src="#" alt="" srcset=""></span>
+                <a href="black_history.html" class="hover-title">Black History</a><span class="hover-image"><img src="imgs/Queens.jpg" alt="" srcset=""></span>
+            </div>
+        </div> -->
+            <div class="projects_category  animate__delay-1s">
+                <div>
+                    <a href="https://github.com/rhenry7/coffee_bot_2" class="hover-title">Coffee_Bot</a><span class="hover-image"><img src="#" alt="" srcset=""></span>
+                    <a href="https://github.com/rhenry7/Therapy_Bot_2" class="hover-title">Therapy.ai</a><span class="hover-image"><img src="" alt="" srcset=""></span>
+                    <a href="black_history.html" class="hover-title">Black History</a><span class="hover-image"><img src="imgs/Queens.jpg" alt="" srcset=""></span>
+                </div>
+            </div>
+        </section>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
