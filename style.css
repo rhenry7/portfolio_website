@@ -60,6 +60,10 @@ ul.list li {
     height: 120px;
 }
 
+iframe[seamless] {
+    display: block;
+}
+
 
 /* Scale canvas with resize attribute to full size */
 
@@ -73,7 +77,7 @@ ul.list li {
 
 .theBall {
     position: absolute;
-    background-color: rgb(255, 255, 255) !important;
+    background-color: rgba(67, 210, 198, 0.204) !important;
     border-radius: 50%;
     -webkit-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
     -moz-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
@@ -94,7 +98,7 @@ ul.list li {
 
 ::selection {
     background-color: rgb(170, 170, 170);
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 a.test {
@@ -106,8 +110,8 @@ a.test {
 
 body {
     height: 70vh;
-    background: rgb(61, 149, 206);
-    color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    color: rgb(10, 10, 10);
     /* background: black;
     color: white; */
     font-family: gopher, sans-serif;
@@ -186,7 +190,7 @@ a:after {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #fff;
+    background: rgb(0, 0, 0);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -198,7 +202,7 @@ a:hover:after {
 
 a {
     font-family: gopher, sans-serif;
-    color: #fff;
+    color: rgb(0, 0, 0);
     /* text-transform: uppercase; */
     text-decoration: none;
     font-size: 42px;
@@ -217,7 +221,7 @@ a:after {
     left: 50%;
     position: absolute;
     text-decoration: none;
-    background: #fff;
+    background: rgb(0, 0, 0);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -461,15 +465,6 @@ body:not(.mobile) .hover-title:hover+.hover-image {
     margin: 0px;
     margin-bottom: 10px;
     text-decoration: none;
-}
-
-.project-image:hover {
-    /* -ms-transform: scale(1.5); */
-    /* IE 9 */
-    /* -webkit-transform: scale(1.5); */
-    /* Safari 3-8 */
-    transform: scale(1.5);
-    cursor: none;
 }
 
 .demo_link {
