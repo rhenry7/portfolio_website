@@ -56,8 +56,8 @@ ul.list li {
 .theBall-outer {
     mix-blend-mode: exclusion;
     will-change: opacity;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
 }
 
 iframe[seamless] {
@@ -77,7 +77,7 @@ iframe[seamless] {
 
 .theBall {
     position: absolute;
-    background-color: rgba(67, 210, 198, 0.204) !important;
+    background-color: rgba(56, 197, 197, 0.957);
     border-radius: 50%;
     -webkit-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
     -moz-transition: transform .2s cubic-bezier(.175, .885, .32, 1.275);
@@ -87,14 +87,14 @@ iframe[seamless] {
     transform-origin: center;
 }
 
-
-/* .zooming.theBall {
-	-webkit-transform: scale(2);
-	-moz-transform: scale(2);
-	-ms-transform: scale(2);
-	-o-transform: scale(2);
-	transform: scale(2);
-} */
+.zooming.theBall {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    background-color: rgba(56, 197, 197, 0.444);
+}
 
 ::selection {
     background-color: rgb(170, 170, 170);
@@ -334,6 +334,10 @@ body:not(.mobile) .hover-title:hover+.hover-image {
     margin-bottom: 0;
     cursor: zoom-in;
     transition: all 0.3s ease-out;
+}
+
+img {
+    border: 0.001px solid rgb(234, 234, 234);
 }
 
 .blurb {

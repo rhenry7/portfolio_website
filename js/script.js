@@ -121,9 +121,9 @@ function createShadow(e, currTarget) {
 	const yWalk = coordWalk(e.clientY, currTarget.offsetHeight);
 
 	const pink = [255,47,47];
-	const blue = [255,101,62];
-	const yellow = [255,177,58];
-	const typoAlpha = 0.3;
+	const blue = [255,201,262];
+	const yellow = [155,177,58];
+	const typoAlpha = 0.0;
 
 	const typo = currTarget.querySelector(".typo");
 	changeTextAlphaVal(typo, e); // Comment this if you don't want the text alpha opacity to change on interaction
