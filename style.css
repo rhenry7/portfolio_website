@@ -534,6 +534,17 @@ body {
     font-size: 18pt;
 }
 
+.about_heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+    font-size: 20pt;
+    margin: auto;
+    padding-top: 20%;
+    width: 90%;
+}
+
 .typo {
     color: $c_typo;
     cursor: none;
